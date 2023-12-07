@@ -1,0 +1,150 @@
+.conenedor-contenido {
+	margin: 0px auto;
+	width: 95%;
+	max-width: 800px;
+}
+
+label {
+	display: block;
+	width: 80%;
+	margin-top: 15px;
+	margin-bottom: 5px;;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+	width: 80%;
+	padding: 8px;
+}
+
+input[type="submit"],
+button {
+	padding: 8px;
+	margin-top: 15px;
+	background: #00AA33;
+	color: white;
+	border: 1px solid #047245;
+	cursor: pointer;
+	transition: all 300ms:
+}
+
+input[type="submit"]:hover,
+button:hover {
+	background: #047245;
+}
+
+.botones div {
+	text-align: center;
+}
+
+.botones div a {
+	width: 50px;
+	height: 20px;
+	text-decoration: none;
+	border: 1px solid #444;
+	padding: 10px;
+	margin: 2px;
+	color: white;
+}
+
+.botones div a:first-child {
+	padding-left: 19px;
+	padding-right: 19px;
+}
+
+.boton-rojo {
+	background: #FF0000;
+}
+
+.boton-rojo:hover {
+	background: #FF3F3F;
+}
+
+.boton-amarillo {
+	background: #FFC500;
+}
+
+.boton-amarillo:hover {
+	background: #FFCf2A;
+}
+
+.boton-verde {
+	background: #008802;
+}
+
+.boton-verde:hover {
+	background: #009E02;
+}
+
+header {
+	width: 95%;
+	max-width: 800px;
+	margin: 0px auto;
+	font: 18px/1.5 sans-serif;
+}
+
+.clearfix {
+	float: none;
+	clear: both;
+}
+
+header ul {
+	width: 100%;
+	height: 50px;
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	background: #EEE;
+	line-height: 50px;
+}
+
+header ul li {
+	display: block;
+	padding-left: 15px;
+	padding-right: 15px;
+	border-right: 1px solid #CCC;
+	float: left;
+	cursor: pointer;
+	transition: all 300ms;
+}
+
+header ul li:hover {
+	background: #DDD;
+}
+
+header ul li a {
+	display: block;
+	color: #444;
+	text-decoration: none;
+}
+
+.derecha {
+	float: right;
+	border-left: 1px solid #CCC;
+	border-right: none;
+}
+
+table {
+	width: 100%;
+}
+
+table th,
+table td {
+	background: #F6F6F6;
+	padding: 15px;
+	padding-right: 25px;
+	padding-left: 25px;
+	border-bottom: 1px solid #EEE;
+	text-align: center;
+}
+
+table td {
+	background: #E9FFEA;
+}
+
+.datos-tarea {
+	color: gray;
+}

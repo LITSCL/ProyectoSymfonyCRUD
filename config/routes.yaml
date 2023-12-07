@@ -1,0 +1,55 @@
+tarea_vista_tareas:
+    path: /
+    controller: App\Controller\TareaController::tareas
+
+tarea_vista_crear:
+    path: /tarea-crear
+    controller: App\Controller\TareaController::crear
+       
+tarea_vista_detalle:
+    path: /tarea/{id}
+    controller: App\Controller\TareaController::detalle
+    
+tarea_vista_misTareas:
+    path: /mis-tareas
+    controller: App\Controller\TareaController::misTareas
+    
+tarea_vista_editar:
+    path: /tarea-editar/{id}
+    controller: App\Controller\TareaController::editar
+    
+tarea_accion_save:
+    path: /tarea-guardar
+    controller: App\Controller\TareaController::save
+    
+tarea_accion_update:
+    path: /tarea-actualizar
+    controller: App\Controller\TareaController::update
+    
+tarea_accion_delete:
+    path: /tarea-borrar/{id}
+    controller: App\Controller\TareaController::delete
+
+usuario_vista_registro:
+    path: /registro
+    controller: App\Controller\UsuarioController::registro
+
+usuario_vista_iniciarSesion:
+    path: /iniciar-sesion
+    controller: App\Controller\UsuarioController::iniciarSesion
+    
+usuario_accion_autenticarSesion:
+    path: /autenticar-sesion
+    controller: App\Controller\UsuarioController::autenticarSesion
+    
+usuario_accion_errorSesion:
+    path: /error-sesion
+    controller: App\Controller\UsuarioController::errorSesion
+    
+usuario_accion_cerrarSesion:
+    path: /cerrar-sesion
+    
+usuario_accion_save:
+    path: /usuario-guardar
+    controller: App\Controller\UsuarioController::save
+    methods: [POST]

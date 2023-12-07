@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Iniciar Sesion{% endblock %}
+
+{% block body %}
+<div class="conenedor-contenido">
+{% for mensaje in app.session.flashbag().get("mensaje") %}
+	<strong>{{ mensaje }}</strong>
+{% endfor %}
+    <h1>Iniciar Sesion</h1>
+    
+    {% if error %}
+    	<div class="alerta alerta-error">
+    		{{ error.messagekey|trans(error.messageData, "security") }}
+    	</div>
+    {% endif %}
+
+	<form action="{{ path('usuario_accion_autenticarSesion') }}" method="POST">
+		<label for="username">Correo</label>
+		<input type="email" id="username" name="_username" value="{{ ultimoCorreoUsuario }}"/> <!-- El name debe ser "_username" porque Symfony lo procesa de esa forma. -->
+	
+		<label for="password">Clave</label>
+		<input type="password" id="password" name="_password"/> <!-- El name debe ser "_password" porque Symfony lo procesa de esa forma. -->
+		
+		<div class="clearfix"></div>
+		
+		<input type="submit" value="Iniciar Sesion"/>
+	</form>
+</div>
+{% endblock %}

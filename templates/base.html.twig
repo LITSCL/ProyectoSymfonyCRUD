@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Bienvenido!{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}"/>
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+    <body>
+   		{% block header %}
+   			<header>
+		   		<h1>Tareas Symfony</h1>
+		    	<ul>
+	    		{% if app.user %}
+					<li><a href="{{ path('tarea_vista_tareas') }}">Inicio</a></li>
+		    		<li><a href="{{ path('tarea_vista_misTareas') }}">Mis tareas</a></li>
+		    		<li><a href="{{ path('tarea_vista_crear') }}">Crear tarea</a></li>
+					<li class="derecha"><a href="#">{{ app.user.nombre ~ " " ~ app.user.apellido}}</a></li>
+					<li class="derecha"><a href="{{ path('usuario_accion_cerrarSesion') }}">Cerrar sesion</a></li>
+	    		{% else %}
+		    		<li class="derecha"><a href="{{ path('usuario_vista_registro') }}">Registro</a></li>
+		    		<li class="derecha"><a href="{{ path('usuario_vista_iniciarSesion') }}">Iniciar sesion</a></li>
+		    	{% endif %}
+		    	</ul>
+	    	</header>
+	    	<div class="clearfix"></div>
+   		{% endblock %}
+   		
+        {% block body %}{% endblock %}
+    </body>
+</html>

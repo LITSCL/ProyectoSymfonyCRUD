@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Registro{% endblock %}
+
+{% block body %}
+<div class="conenedor-contenido">
+{% for mensaje in app.session.flashbag().get("mensaje") %}
+	<strong>{{ mensaje }}</strong>
+{% endfor %}
+    <h1>Registro</h1>
+    {{ form_start(formulario) }}
+    {{ form_widget(formulario) }}
+    {{ form_end(formulario) }}
+</div>
+{% endblock %}

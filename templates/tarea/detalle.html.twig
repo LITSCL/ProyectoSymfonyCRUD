@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Detalle{% endblock %}
+
+{% block body %}
+<div class="conenedor-contenido">
+	<h2>{{ tarea.titulo }}</h2>
+	<p class="datos-tarea">
+		{{ tarea.usuario.nombre }} {{ tarea.usuario.apellido }} | {{ tarea.createdAt|date("d/m/Y h:i") }} | {{ tarea.prioridad }} | {{ tarea.horas }}h
+	</p>
+	<p>
+		{{ tarea.contenido }}
+	</p>
+</div>
+{% endblock %}

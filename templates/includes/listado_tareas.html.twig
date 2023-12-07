@@ -1,0 +1,28 @@
+{% if tareas|length >= 1 %}
+	<table>
+		<tr>
+			<th>Tarea</th>
+			<th>Prioridad</th>
+			<th>Horas</th>
+			<th>Acciones</th>
+		</tr>
+	{% for tarea in tareas %}
+		<tr>
+			<td>{{ tarea.titulo }}</td>
+			<td>{{ tarea.prioridad }}</td>
+			<td>{{ tarea.horas }}</td>
+			<td class="botones">
+				<div>
+					<a class="boton-verde" href="{{ path('tarea_vista_detalle', {'id' : tarea.id}) }}">Ver</a> <!-- EL metodo "path", puede recibir un segundo parametro, el cual es un JSON, donde cada clave y valor representan un parametro GET. -->
+				{% if app.user != null and app.user.id == tarea.usuario.id %}
+					<a class="boton-amarillo" href="{{ path('tarea_vista_editar', {'id' : tarea.id}) }}">Editar</a>
+					<a class="boton-rojo" href="{{ path('tarea_accion_delete', {'id' : tarea.id}) }}">Borrar</a>
+				{% endif %}
+				</div>
+			</td>
+		</tr>
+	{% endfor %}
+	</table>
+{% else %}
+	<strong>No hay tareas disponibles en este momento</strong>
+{% endif %}
