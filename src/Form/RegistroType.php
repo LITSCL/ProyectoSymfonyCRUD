@@ -13,10 +13,10 @@ class RegistroType extends AbstractType
     public function buildForm($builder, $options)
     {
         $builder->setMethod("POST")
-        ->add("nombre", TextType::class, ["label" => "Nombre"])
-        ->add("apellido", TextType::class, ["label" => "Apellido"])
-        ->add("correo", EmailType::class, ["label" => "Correo"])
-        ->add("clave", PasswordType::class, ["label" => "Clave"])
-        ->add("boton", SubmitType::class, ["label" => "Registrarse"]);
+            ->add("nombre", TextType::class, ["label" => "Nombre"])
+            ->add("apellido", TextType::class, ["label" => "Apellido"])
+            ->add("correo", EmailType::class, ["label" => "Correo"])
+            ->add("clave", PasswordType::class, ["label" => "Clave"])
+            ->add("boton", SubmitType::class, ["label" => "Registrarse"]);
     }
 }
